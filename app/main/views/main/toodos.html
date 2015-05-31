@@ -14,7 +14,7 @@
       </form>
 
       <table class="toodo-table">
-        {{ page._toodos.each_with_index do |toodo, index| }}
+        {{ _toodos.each_with_index do |toodo, index| }}
           <tr e-click="params._index = index"
               class="{{ if (params._index || 0).to_i == index}}selected{{ end }}"
             >
