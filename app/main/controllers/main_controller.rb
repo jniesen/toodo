@@ -23,5 +23,10 @@ module Main
     def active_tab?
       url.path.split('/')[1] == attrs.href.split('/')[1]
     end
+
+    def add_toodo
+      page._toodos << { name: page._new_toodo }
+      page._new_toodo = ''
+    end
   end
 end
