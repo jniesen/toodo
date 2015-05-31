@@ -14,7 +14,9 @@
   <table class="toodo-table">
     {{ page._toodos.each do |toodo| }}
       <tr>
-        <td>{{ toodo._name }}</td>
+        <td><input type="checkbox" checked="{{ toodo._completed }}" /></td>
+        <td class="{{ if toodo._completed }}complete{{ end }}">{{ toodo._name }}</td>
+        <td><button e-click="toodo.destroy">X</button></td>
       </tr>
     {{ end }}
   </table>
