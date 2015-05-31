@@ -28,5 +28,9 @@ module Main
       page._toodos << { name: page._new_toodo }
       page._new_toodo = ''
     end
+
+    def current_toodo
+      page._toodos[(params._index || 0).to_i]
+    end
   end
 end
